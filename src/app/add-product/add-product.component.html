@@ -1,0 +1,17 @@
+<form [formGroup]="stageForm" (ngSubmit)="addStage()">
+  <input type="number" formControlName="id">
+
+  <input type="text" formControlName="name">
+  <div *ngIf="stageForm.controls['name'].invalid && stageForm.controls['name'].touched">
+    <small class="text-danger">Le champ "name" est obligatoire.</small>
+  </div>
+  <input type="text" formControlName="description">
+  <div *ngIf="stageForm.controls['description'].invalid && stageForm.controls['description'].touched">
+    <small class="text-danger">Le champ "description" est obligatoire.</small>
+  </div>
+  <input type="number" formControlName="price">
+  <input type="number" formControlName="likes">
+  <input type="submit" [disabled]="stageForm.invalid">
+</form>
+
+

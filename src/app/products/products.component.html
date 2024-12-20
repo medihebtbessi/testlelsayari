@@ -1,0 +1,12 @@
+<div *ngFor="let p of products">
+  <div *ngIf="p.available">
+    <div class="card-body" >
+      <p>{{p.id}}</p>
+
+      <h3>{{p.name}}</h3>
+      <a class="btn btn-light" (click)="like(p.id)">Like</a>
+    </div>
+  </div>
+
+</div>
+
